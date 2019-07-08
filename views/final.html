@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/final.css">
+	<title>Final Info</title>
+</head>
+<body>
+	<div class="overall">
+	<center>
+		<hr>
+		<h1>Group Healthcare Policy</h1>
+		<h2><%- year -%></h2>
+		<h2>Summary of Health Insurance benefits for employees</h2>
+		<h2><%- corporateName -%></h2>
+	</center>
+	<br>
+	<center><h2><%- agencyName -%> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SureClaim</h2></center>
+	<br><hr>
+	<div class="slide">
+		<h2>What is Group Health Insurance</h2>
+		<p>
+		• Healthcare is growing expensive day by day<br>
+		• Any hospitalization due to simple reason or a complex surgery
+		  can burn a hole in your pocket.<br>
+		• You may not always be prepared with money to pay for these
+		  expenses.<br>
+		• Health Insurance is an effective way to manage such
+		  uncertainties in life and handle unforeseen health expenses.<br>
+		• Group Health Insurance (GHI) is an insurance policy purchased
+		  by a company to cover their employees, with an option also to
+		  cover their family members such as spouse, children and parents.<br>
+		• Unlike a regular health policy which has waiting period to claim
+		  for certain kind of ailments, GHI enables employees and<br>
+		  dependents to be covered for such ailments from day 1 of
+		  getting added to policy.<br>
+		</p>  
+	</div>
+	<br>
+	<center><h2>Policy Details</h2></center>
+	
+	<center><h3>Insurer:<%- insurer -%><b> | Insurance Advisor: </b><%- insAdvisor -%><b><br> <% if(tpa){ %> TPA: </b><%- tpa -%> | <% } %> Account Manager:</b> SureClaim</h3></center>
+
+	<table width="70%" align="center">
+		<tr>
+			<td><b>Policy Start date</b></td>
+			<td><%- startDate -%></td>
+		</tr>
+		<tr>
+			<td><b>Policy Expiry date</b></td>
+			<td><%- expDate -%></td>
+		</tr>
+		<tr>
+			<td><b>Coverage Type</b></td>
+			<td><%- covType -%></td>
+		</tr>
+		<tr>
+			<td><b>Dependant Coverage</b></td>
+			<td><%- depCov -%></td>
+		</tr>
+		<tr>
+			<td><b>Sum Insured</b></td>
+			<td><%- sumIns1 -%></td>
+		</tr>
+	</table>
+	<br><hr>
+
+	<div class="slide">
+		<h2>Coverage Specifics: Hospitalization</h2>
+		<p>
+		• <b>Hospitalization:</b> Admission in hospital for a minimum duration
+		  of 24 hours, except for daycare procedures.<br>
+		• <b>Daycare procedure</b> is any treatment taken under General or
+		  Local anesthesia and does not require hospitalization for 24
+		  hours due to advancements in medical science.<br>
+		• <b>Hospital</b> is defined as any registered medical center providing
+		  in-patient or day-care treatment, having atleast 10 in-patient
+		  beds in a tier-2 city/town and having atleast 15 in-patient beds
+		  in a tier-1 city or metro city.<br>
+		• <b>Need for hospitalization:</b> If the patient is admitted in hospital
+		  only for the purpose of diagnostic tests, or when the treatment
+		  could have been provided on out-patient basis, then such
+		  claims are not payable by insurance company.<br>
+		</p>  
+	</div><br><hr>
+
+	<div class="slide">
+		<h2>Coverage Specifics: OPD Cover</h2>
+		<table width='70%' align="center">
+			<th><b>Sum Insured</b></th>
+			<th><b>Pre-Hospitalization OPD<br>
+			(before admission)</b></th>
+			<th><b>Post-Hospitalization<br>
+			(after discharge)</b></th>
+
+			<tr>
+				<td><%- sumIns1 -%></td>
+				<td><%- preOpd -%></td>
+			    <td><%- postOpd -%></td>
+			</tr>
+		</table>
+		<br>
+		<p>
+			• Out-patient (OPD) expenses such as doctor consultation
+			charges, lab and diagnostic charges, medicines, physiotherapy
+			etc. are only covered when patient has to be admitted in
+			hospital and the claim is accepted by insurer.<br>
+			• Otherwise general OPD expenses are not covered by policy.<br>
+			• OPD expenses related to hospital treatment are only payable.<br>
+			• Dental treatments are not payable, except when related to any
+			accidents requiring hospitalization.<br>
+			• Vaccinations are not covered.<br>
+		</p>
+	</div><br><hr>
+
+	<div class="slide">
+		<h2>Coverage Specifics: Sum Insured, Room Rent Eligibility</h2>
+		<table width='70%' align="center">
+			<th><b>Sum Insured</b></th>
+			<th><b>Room Rent Limit (per day)</b></th>
+			<th><b>ICU Ward Limit (per day)</b></th>
+
+			<tr>
+				<td><%- sumIns1 -%></td>
+				<td><%- rentLimit -%></td>
+			    <td><%- icuWard -%></td>
+			</tr>
+		</table>
+		<br>
+		<p>
+			• Room Rent Limit: This limit is inclusive of per day room/ward
+			charges of hospital and nursing charges.<br>
+			• Duty doctor charges, if billed separate by hospital, are not
+			payable.<br>
+			• When patient occupies a room whose rent+nursing charges is
+			more than the limit, then proportionate deduction will take
+			place.<br>
+			• Proportionate Deduction: Assume patient’s per day room rent
+			is Rs 7000, while limit is Rs 5000 as per policy, then the extra Rs
+			2000 is 28% of the actual room rent. This is the proportionate
+			deduction, meaning, insurance will deduct 28% from the
+			hospital bill and only pay 72% of bill because of proportionate
+			deduction rule. A percentage of bill is proportionately
+			deducted by insurer whenever you take a room category above
+			room rent limit.<br>
+		</p>
+	<hr>
+
+	<% if(mat){ %>
+	<div class="slide">
+		<h2>Coverage Specifics: Maternity & New Born cover</h2>
+		<table width='70%' align="center">
+			<th><b>Sum Insured</b></th>
+			<th><b>Cover for Normal delivery</b></th>
+			<th><b>Cover for C-Section delivery</b></th>
+
+			<tr>
+				<td><%- si1 -%></td>
+				<td><%- cn1 -%></td>
+			    <td><%- cc1 -%></td>
+			</tr>
+			<tr>
+				<td><%- si2 -%></td>
+				<td><%- cn2 -%></td>
+			    <td><%- cc2 -%></td>
+			</tr>
+			<tr>
+				<td><%- si3 -%></td>
+				<td><%- cn3 -%></td>
+			    <td><%- cc3 -%></td>
+			</tr>
+		</table>
+		<br>
+		<p>
+			• Employee and their spouse (if added in policy) are eligible for this benefit as per
+			table above.<br>
+			• Pre and Post Natal charges (such as consultations, scans, medicines etc.)
+			covered upto Rs 5000 within maternity limit.<br>
+			• New Born baby is covered from day of birth in policy upto sum insured subject
+			to adequate CD balance is maintained.<br>
+			• Make sure to inform HR to add baby in policy, claims will be processed only on
+			reimbursement basis till the endorsement is passed for the addition.<br>
+			• Any hospitalizations for pregnancy-related complications will be covered within
+			the applicable maternity limit given above.<br>
+			• Well-born baby expenses also will be covered within maternity limit. However,
+			upto sum insured cover is available if new born develops any complications.<br>
+		</p>
+	<% } %>
+	</div><br><hr>
+	
+	<% if(cwl){ %>
+	<div class="slide">
+		<h2>Coverage Specifics: Cover with Limits</h2>
+		<table width='70%' align="center">
+			<th><b>Component</b></th>
+			<th><b>Cap</b></th>
+
+			<tr>
+				<td><%- com1 -%></td>
+				<td><%- cap1 -%></td>
+			</tr>
+			<tr>
+				<td><%- com2 -%></td>
+				<td><%- cap2 -%></td>
+			</tr>
+			<tr>
+				<td><%- com3 -%></td>
+				<td><%- cap3 -%></td>
+			</tr>
+		</table>	
+	<% } %>
+	</div><br><hr>	
+
+	<div class="slide">
+		<h2>Limitation of Health Insurance Policy</h2>
+		<p>
+		• Pays upto sum insured only.<br>
+		• Admissions where need for hospitalization is not clear or patient
+		could be managed on OPD basis and when treatment is not
+		covered by policy are not payable by insurance,<br>
+		• Excluded expenses are payable by patient.<br>
+		• Proportionate deduction & copay share (wherever applicable)
+		are payable by patient.<br>
+		• Cashless facility is not available in every hospital, patient has to
+		go for reimbursement claim in non-network hospital.<br>
+		• All OPD and diagnostic expenses (when there is no hospital
+		admission or daycare procedure) are non payable.<br>
+		</p>  
+	</div><br><hr>
+	
+	<div class="slide">
+		<h2>Exclusions / Non-payables as per policy</h2>
+		<p>
+		• Lasik surgery, Psychiatric treatment, AYUSH coverage.<br>
+		• Cochlear Implant Procedure, Femtolaser.<br>
+		• Robotic surgery and allied treatments.<br>
+		• Infertility & Related Ailments incl. male sterility.<br>
+		• Treatment on trial/experimental basis.<br>
+		• Admin/Registration/Service/Misc. Charges.<br>
+		• Expenses on fitting of Prosthesis.<br>
+		• Any device/instrument/machine contributing/replacing the function of an
+		organ.<br>
+		• Holter Monitoring.<br>
+		• Circumcision.<br>
+		• Cost of spectacles and contact lenses.<br>
+		• Cost of hearing aids.<br>
+		• Dental treatment of any kind unless requiring hospitalization.<br>
+		• Expenses on nutrition supplements.<br>
+		• Naturopathy treatment.<br>
+		• Congenital external diseases.<br>
+		• HIV and AIDS.<br>
+		• Hospitalization for intentional self-injury, use of intoxicating drugs/ alcohol.<br>
+		• Cosmetic or Plastic Surgery except for correction of injury.<br>
+		• Hospitalization for diagnostic tests only.<br>
+		• And all other expenses which are not payable as per policy terms and
+		conditions.<br>
+		</p>  
+	</div><br><hr>
+
+	<div class="slide">
+		<h2>Claim Procedure: Cashless Claim</h2>
+		<p>
+		1. Employee visits network hospital with insurance card.
+		Visit <a href = <%-link-%>> this link </a> to check list of network hospitals.<br>
+		2. Hospital requests employee to fill Pre-authorization form (Preauth). Hospital
+		sends Preauth request to insurance company (48 hours prior to a planned
+		hospitalization & within 24 hours in emergency case).<br>
+		3. Insurer issues a Preauth approval letter when treatment is covered within policy.<br>
+		4. At the time of discharge, hospital sends final bill and discharge summary to
+		insurer for final approval.<br>
+		5. Insurer sends final approval with approved amount to hospital. The non-payable
+		charges have to be borne by employee.<br>
+		6. <b>Employee needs to claim pre and post hospitalization( within 7 days of post
+		hospitalization bill) OPD expenses through Reimbursement claim.</b><br>
+		</p>  
+	</div>
+	<br><hr>
+
+	<div class="slide">
+		<h2>Claim Procedure: Reimbursement Claim</h2>
+		<p>
+		1. Reimbursement claim with duly filled form and all supporting documents have to
+		be submitted to insurer within 15 days from date of discharge.<br>
+		2. If there are deficiencies in claim documents, insurer will raise additional
+		document request. Claim will not be paid till all required documents are
+		submitted.<br>
+		3. Settlement will take place within 30 days from date of submission of last
+		necessary document. Payment will be via NEFT.<br>
+		</p>  
+	</div>	
+	<br><hr>
+
+	<div class="slide">
+		<h2>FAQs</h2>
+		<p>
+		<b>• Can I add my dependents just before hospitalization?</b><br>
+		->You are only allowed to add dependents at the time of policy renewal or at the time of your joining.<br><br>
+		<b>• When is mid-term inclusion of dependents allowed?</b><br>
+		->Mid-term inclusion is allowed in case of (a) Spouse, on account of marriage during policy term (b)
+		Childbirth.<br><br>
+		<b>• What if my claim is rejected?</b><br>
+		->It is possible the claim gets rejected if (a) treatment is not covered by policy (b) sum insured has
+		exhausted (c) need for hospitalization is not justified. Consult with Customer Hotline to check claim
+		applicability.<br><br>
+		<b>• If I want to take patient home earlier than 24 hours, will there be a problem?</b><br>
+		->Policy will only pay for a covered treatment when there is min. 24 hr hospitalization (except when
+		treatment is day care). Insurer has the right to reject claim when duration is less than 24 hrs.<br><br>
+		<b>• Is it possible to apply cashless in more than one policy?</b><br>
+		->Cashless is allowed only in one policy. However, if sum insured gets exhausted and some amount remains
+		unpaid by insurance, that can be claimed from any other health insurance policy. Speak to customer
+		hotline for more information.<br><br>
+		<b>• Can capped procedure cost be claimed over more than 1 health policy?</b><br>
+		->If 2 or more insurance policies cover the treatment, even if it coverage limit is capped in the policies,
+		overall bill can be split and claimed from 2 or more policies. Speak to customer hotline for the same.<br><br>
+		<b>• Does SureClaim pick claim documents from office?</b><br>
+		->Yes, employee can give appointment to SureClaim claim advisor to collect documents either from office
+		or from their residence (available only in Bangalore). There are no additional charges for this service.<br><br>
+		</p>  
+	</div><br><hr>
+
+	<center>
+	<h2> Contact Details </h2>
+	<h3>24x7 Customer Hotline</h3>
+	&nbsp&nbsp&nbsp&nbsp -> 9342659495<br>
+	&nbsp&nbsp&nbsp&nbsp -> care@sureclaim.in<br>
+
+	<h3>First Level Escalation</h3>
+	&nbsp&nbsp&nbsp&nbsp -> Kislay Kumar <b>SureClaim</b><br>
+	&nbsp&nbsp&nbsp&nbsp -> 8050023078<br>
+	&nbsp&nbsp&nbsp&nbsp -> kislay@sureclaim.in<br>
+	
+	<h3>Second Level Escalation</h3>
+	&nbsp&nbsp&nbsp&nbsp -> <%- name -%> <b><%- agencyName -%></b><br>
+	&nbsp&nbsp&nbsp&nbsp -> <%- phno -%><br>
+	&nbsp&nbsp&nbsp&nbsp -> <%- email -%><br>
+	</center>
+	<br>
+
+</div>
+</body>
+</html>
