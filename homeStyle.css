@@ -1,0 +1,43 @@
+body{
+	background: #0d15ef;
+}
+
+.overall{
+	background: #ffffff;
+	font-family: Raleway;
+	color: #0d15ef;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+
+p{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+table { 
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+h2{
+	text-align: center;
+}
